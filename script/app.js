@@ -4,8 +4,29 @@ const calc_temp = temp => {
     result=Math.round(celcius*100)/100
     return result
 }
+const calc_farenheigt = temp => {
+
+    return result
+}
 
 const showData_celsius = data => {
+    //console.log(data)
+    temp = data.main.temp;
+    feel = data.main.feels_like
+    min = data.main.temp_min
+    max = data.main.temp_max
+    humidity = data.main.humidity
+    temperatuur = calc_temp(temp)
+    feel_temp = calc_temp(feel)
+    min_temp = calc_temp(min)
+    max_temp = calc_temp(max)
+    document.querySelector('.js-temperatuur').innerText = `${temperatuur} °C`;
+    document.querySelector('.js-feels-like').innerText = `${feel_temp} °C`;
+    document.querySelector('.js-Min-temp').innerText = `${min_temp} °C`;
+    document.querySelector('.js-Max-temp').innerText = `${max_temp} °C`;
+    document.querySelector('.js-humidity').innerText = `${humidity} %`;
+}
+const showData_farenheigt = data => {
     //console.log(data)
     temp = data.main.temp;
     feel = data.main.feels_like
@@ -36,12 +57,26 @@ const getAPI = async (lat,lon) => {
     const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=4dc82a8db4261d0aaa945c76431fda04`)
     .then((r) => r.json())
     .catch((err) => console.error('Error: ', err))
-    showData_celsius(data);
+    var checkbox = document.querySelector('input[type="checkbox"]');
     showData_Wind(data);
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+        showData_celsius(data);
+        console.log('Checked');
+        } else {
+        showData_farenheigt(data)
+        console.log('Not checked');
+        };
+    });
+    
+    
 };
 
 
 document.addEventListener('DOMContentLoaded', function(){
     console.log('Script ingeladen');
     getAPI(50.8868222, 3.4323622)
+    
+
+  
 })
