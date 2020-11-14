@@ -1,4 +1,4 @@
-
+// --Hulpmiddels voor het omrekenen van gegevens--
 const calc_temp = temp => {
     celcius = temp - 273.15
     result=Math.round(celcius*100)/100
@@ -9,8 +9,8 @@ const calc_farenheigt =  temp=> {
     result=Math.round(fahrenheit*100)/100
     return result
 }
-
-
+// --
+// --Data dat wordt getoont--
 const showData_celsius = data => {
     //console.log(data)
     temp = data.main.temp;
@@ -49,11 +49,12 @@ const showData_Wind = data => {
     console.log(data)
     windspeed = data.wind.speed
     windspeed_convert = windspeed * 3.6
+    result=Math.round(windspeed_convert*100)/100
     //console.log(windspeed_convert)
-    document.querySelector('.js-Windspeed').innerText = `${windspeed_convert} KM/u`;
+    document.querySelector('.js-Windspeed').innerText = `${result} KM/u`;
 }
-
-
+// --
+// --data ophalen ++ controleren op toggle switch ++ huidige locatie opvragen--
 const getAPI = async (position) => {
     lat = position.coords.latitude
     lon = position.coords.longitude
@@ -82,10 +83,10 @@ function getLocation() {
       console.log("Geolocation is not supported by this browser.");
     }
 }
-  
+// --
+
 document.addEventListener('DOMContentLoaded', function(){
     console.log('Script ingeladen');
     getLocation();
     // getAPI(50.8868222, 3.4323622)
-    
 })
