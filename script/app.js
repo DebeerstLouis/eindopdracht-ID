@@ -4,10 +4,12 @@ const calc_temp = temp => {
     result=Math.round(celcius*100)/100
     return result
 }
-const calc_farenheigt = temp => {
-
+const calc_farenheigt =  temp=> {
+    fahrenheit = (temp - 273.15)* 1.8000 + 32.00
+    result=Math.round(fahrenheit*100)/100
     return result
 }
+
 
 const showData_celsius = data => {
     //console.log(data)
@@ -33,17 +35,16 @@ const showData_farenheigt = data => {
     min = data.main.temp_min
     max = data.main.temp_max
     humidity = data.main.humidity
-    temperatuur = calc_temp(temp)
-    feel_temp = calc_temp(feel)
-    min_temp = calc_temp(min)
-    max_temp = calc_temp(max)
-    document.querySelector('.js-temperatuur').innerText = `${temperatuur} °C`;
-    document.querySelector('.js-feels-like').innerText = `${feel_temp} °C`;
-    document.querySelector('.js-Min-temp').innerText = `${min_temp} °C`;
-    document.querySelector('.js-Max-temp').innerText = `${max_temp} °C`;
+    temperatuur = calc_farenheigt(temp)
+    feel_temp = calc_farenheigt(feel)
+    min_temp = calc_farenheigt(min)
+    max_temp = calc_farenheigt(max)
+    document.querySelector('.js-temperatuur').innerText = `${temperatuur} °F`;
+    document.querySelector('.js-feels-like').innerText = `${feel_temp} °F`;
+    document.querySelector('.js-Min-temp').innerText = `${min_temp} °F`;
+    document.querySelector('.js-Max-temp').innerText = `${max_temp} °F`;
     document.querySelector('.js-humidity').innerText = `${humidity} %`;
 }
-
 const showData_Wind = data => {
     console.log(data)
     windspeed = data.wind.speed
@@ -59,12 +60,14 @@ const getAPI = async (lat,lon) => {
     .catch((err) => console.error('Error: ', err))
     var checkbox = document.querySelector('input[type="checkbox"]');
     showData_Wind(data);
+    showData_celsius(data);
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
-        showData_celsius(data);
+        showData_farenheigt(data)
         console.log('Checked');
         } else {
-        showData_farenheigt(data)
+        
+        showData_celsius(data);
         console.log('Not checked');
         };
     });
