@@ -54,32 +54,38 @@ const showData_Wind = data => {
 }
 
 
-const getAPI = async (lat,lon) => {
+const getAPI = async (position) => {
+    lat = position.coords.latitude
+    lon = position.coords.longitude
     const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=4dc82a8db4261d0aaa945c76431fda04`)
     .then((r) => r.json())
     .catch((err) => console.error('Error: ', err))
-    var checkbox = document.querySelector('input[type="checkbox"]');
     showData_Wind(data);
     showData_celsius(data);
+    // controleren op de toggle switch voor celsius naar fahrenheit
+    var checkbox = document.querySelector('input[type="checkbox"]');
     checkbox.addEventListener('change', function () {
         if (checkbox.checked) {
         showData_farenheigt(data)
-        console.log('Checked');
+        // console.log('Checked');
         } else {
-        
         showData_celsius(data);
-        console.log('Not checked');
+        // console.log('Not checked');
         };
     });
-    
-    
 };
 
-
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(getAPI);
+    } else { 
+      console.log("Geolocation is not supported by this browser.");
+    }
+}
+  
 document.addEventListener('DOMContentLoaded', function(){
     console.log('Script ingeladen');
-    getAPI(50.8868222, 3.4323622)
+    getLocation();
+    // getAPI(50.8868222, 3.4323622)
     
-
-  
 })
