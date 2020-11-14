@@ -6,11 +6,21 @@ const calc_temp = temp => {
 
 
 const showData_celsius = data => {
-    console.log(data)
-    temp = data.main.temp ;
-    console.log(calc_temp(temp));
-    
-    
+    //console.log(data)
+    temp = data.main.temp;
+    feel = data.main.feels_like
+    min = data.main.temp_min
+    max = data.main.temp_max
+    humidity = data.main.humidity
+    temperatuur = calc_temp(temp)
+    feel_temp = calc_temp(feel)
+    min_temp = calc_temp(min)
+    max_temp = calc_temp(max)
+    document.querySelector('.js-temperatuur').innerText = `${temperatuur}`;
+    document.querySelector('.js-feels-like').innerText = `${feel_temp}`;
+    document.querySelector('.js-Min-temp').innerText = `${min_temp}`;
+    document.querySelector('.js-Max-temp').innerText = `${max_temp}`;
+    document.querySelector('.js-humidity').innerText = `${humidity}`;
 }
 
 const getAPI = async (lat,lon) => {
