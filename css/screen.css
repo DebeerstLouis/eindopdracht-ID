@@ -183,13 +183,8 @@ a:focus {
 
 .o-row {
   position: relative;
-  padding: 24px 24px 0;
+  padding: 0px 0px 12px;
 }
-
-.o-row--login {
-  /* stuff here to align the card */
-}
-
 /* size modifiers */
 
 .o-row--lg {
@@ -241,7 +236,7 @@ a:focus {
 }
 .grid {
   background-color: rgba(141, 104, 104, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  border: none;
   border-radius: 10px;
   padding: 20px;
   font-size: 18px;
@@ -250,6 +245,17 @@ a:focus {
 .grid_long_temp {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+.grid_long_header {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: white;
+  max-height: 120px;
+  justify-content: center;
+}
+.grid_long_header > img {
+  width: 160px;
+  height: auto;
 }
 
 /*
@@ -431,7 +437,7 @@ a:focus {
 
 .o-slider:before {
   position: absolute;
-  content: '';
+  content: "";
   height: 26px;
   width: 26px;
   left: 4px;
@@ -880,18 +886,18 @@ No media query since this is the default in mobile first design
     text-decoration: underline;
   }
   a[href]:after {
-    content: ' (' attr(href) ')';
+    content: " (" attr(href) ")";
   }
   abbr[title]:after {
-    content: ' (' attr(title) ')';
+    content: " (" attr(title) ")";
   }
   /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
     */
-  a[href^='#']:after,
-  a[href^='javascript:']:after {
-    content: '';
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
   }
   pre {
     white-space: pre-wrap !important;
