@@ -220,13 +220,13 @@ a:focus {
 .o-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 55em; /* 79.5 * 18px = 1272 */
+  max-width: 35.41666667em; /* 35.41666667 * 24px = 850 */
   width: 100%;
 }
 .o-container_grid {
   margin-left: auto;
   margin-right: auto;
-  max-width: 55em; /* 79.5 * 18px = 1272 */
+  max-width: 35.41666667em; /* 35.41666667 * 24px = 850 */
   display: grid;
 
   grid-column-gap: 50px;
@@ -249,6 +249,10 @@ a:focus {
   color: #5c69f2;
   font-size: 18px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 .grid_long {
   grid-column-start: 1;
@@ -473,71 +477,6 @@ input:checked + .o-slider:before {
 /*------------------------------------*\
 #COMPONENTS
 \*------------------------------------*/
-
-/*
-    Component: Logo
-    ---
-    Website main logo
-*/
-
-/*
-    Component: Card
-    ---
-    Card with box shadow
-*/
-
-/*
-    Component: Forms
-    ---
-    Everything form related here
-*/
-
-/*
-    Component: Input
-    ---
-    Class to put on all input="text" like form inputs
-*/
-
-.c-input {
-}
-
-.c-input:focus {
-}
-
-/*
-    Component: Label
-    ---
-    Class to put on all form labels
-*/
-
-.c-label {
-}
-
-/* If a input is focused within the form-field class change te color of the label */
-
-.c-form-field:focus-within .c-label {
-}
-
-/*
-    Component: Button
-    ---
-    Class to put on form buttons or links
-*/
-
-.c-button {
-}
-
-.c-button:hover {
-}
-
-.c-button:focus {
-}
-
-.c-button:active {
-}
-
-.c-button--block {
-}
 
 /*------------------------------------*\
 #UTILITIES
