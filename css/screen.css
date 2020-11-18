@@ -228,9 +228,7 @@ a:focus {
   margin-right: auto;
   max-width: 35.41666667em; /* 35.41666667 * 24px = 850 */
   display: grid;
-
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-row-gap: 80px;
   grid-template-columns: auto auto;
   padding: 10px;
 }
