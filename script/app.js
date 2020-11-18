@@ -94,6 +94,9 @@ const showData_location_icon = data => {
     //description = data.weather
     document.querySelector('.js-locatie').innerText = `${Locatie}`;
     //document.querySelector('.js-icondescription').innerText = `${description}`;
+    const d = new Date();
+    buddy =  d.toUTCString()
+    document.querySelector('.js-currentdata').innerText = `${buddy}`;
 }
 // --
 // --data ophalen ++ controleren op toggle switch ++ huidige locatie opvragen--
@@ -127,6 +130,9 @@ function getLocation() {
     }
 }
 // --
+
+
+
 
 document.addEventListener('DOMContentLoaded', function(){
     console.log('Script ingeladen');
