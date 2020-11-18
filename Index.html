@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>eindopdracht</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/screen.css">
     <script src="/script/app.js" type="text/javascript"></script>
 </head>
@@ -12,38 +14,38 @@
 <body>
     <section class="o-row">
         <div class="o-container_grid">
-            <div class="grid grid_long_header">
-            <img src="/icons/cloudy-day-2.svg" alt="">
-            </div>
-        </div>
-    </section>
-    <section class="o-row">
-        <div class="o-container_grid">
             <div class="grid grid_long_temp">
-                <h2>Temperatuur</h2>
-                <p class="js-temperatuur">--</p>
+                <div>
+                    <h1 class="js-locatie">Locatie</h1>
+                    <p class="js-currentdata">Dinsdag 17 November 14:16</p>
+                </div>
+                
+                <div>
+                    <h2 class="js-icondescription">Cloudy</h2>
+                    icon
+                </div>
+                <div>
+                <p class="js-temperatuur">Temperatuur</p>
+                </div>
+                <div>
+                <p class="js-Min-Max-feelslike">--</p>
+                </div>
             </div>
             <div class="grid">
-                <h2>feels like</h2>
-                <p class="js-feels-like">--</p>
+                <div>
+                    <h2>Humidity</h2>
+                    <p class="js-humidity">--</p>
+                </div>
+                <div>
+                    <h2>Pressure</h2>
+                    <p class="js-pressure">--</p>
+                </div>
+                <div>
+                    <h2>Wind</h2>
+                    <p class="js-direction">--</p>
+                    <p class="js-Windspeed">--</p>
+                </div>
             </div>
-            <div class="grid">
-                <h2>Min</h2>
-                <p class="js-Min-temp">--</p>
-            </div>
-            <div class="grid">
-                <h2>Max</h2>
-                <p class="js-Max-temp">--</p>
-            </div>
-            <div class="grid">
-                <h2>humidity</h2>
-                <p class="js-humidity">--</p>
-            </div>
-            <div class="grid">
-                <h2>Wind</h2>
-                <p class="js-Windspeed">--</p>
-            </div>
-
         </div>
     </section>
 

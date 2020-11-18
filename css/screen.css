@@ -22,14 +22,14 @@
 */
 
 html {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 2;
-  font-family: Helvetica, arial, sans-serif;
-  color: black;
+  font-family: "Mulish", sans-serif;
+  color: #eaf3fb;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: #5c69f2;
 }
 
 *,
@@ -46,13 +46,13 @@ html {
 */
 
 ::-moz-selection {
-  background: HotPink;
+  background: #8fb7f3;
   color: white;
   text-shadow: none;
 }
 
 ::selection {
-  background: HotPink;
+  background: #8fb7f3;
   color: white;
   text-shadow: none;
 }
