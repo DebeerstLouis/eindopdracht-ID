@@ -57,9 +57,9 @@ const showData_celsius = data => {
     feel_temp = calc_temp(feel)
     min_temp = calc_temp(min)
     max_temp = calc_temp(max)
-    document.querySelector('.js-temperatuur').innerText = `${temperatuur} °C`;
+    document.querySelector('.js-temperatuur').innerText = `${temperatuur}°C`;
     document.querySelector('.js-Min-Max-feelslike').innerText = `Max ${max_temp}°  Min ${min_temp}°  Feels like ${feel_temp}°`;
-    document.querySelector('.js-humidity').innerText = `${humidity} %`;
+    document.querySelector('.js-humidity').innerText = `${humidity}%`;
 }
 const showData_farenheigt = data => {
     //console.log(data)
@@ -72,9 +72,9 @@ const showData_farenheigt = data => {
     feel_temp = calc_farenheigt(feel)
     min_temp = calc_farenheigt(min)
     max_temp = calc_farenheigt(max)
-    document.querySelector('.js-temperatuur').innerText = `${temperatuur} °F`;
+    document.querySelector('.js-temperatuur').innerText = `${temperatuur}°F`;
     document.querySelector('.js-Min-Max-feelslike').innerText = `Max ${max_temp}°  Min ${min_temp}°  Feels like ${feel_temp}°`;
-    document.querySelector('.js-humidity').innerText = `${humidity} %`;
+    document.querySelector('.js-humidity').innerText = `${humidity}%`;
 }
 const showData_Wind_and_pressure = data => {
     console.log(data)
