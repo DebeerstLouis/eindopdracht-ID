@@ -13,40 +13,50 @@
 
 <body>
     <section class="o-row">
-        <div class="o-container_grid">
-            <div class="grid grid_long">
-                <div>
-                    <h1 class="js-locatie">Locatie</h1>
-                    <p class="js-currentdata">Dinsdag 17 November 14:16</p>
+        <div class="o-container">
+            <div class="c-flex-item">
+                <div class="c-item">
+                    <h1 class="js-locatie c-item-location">Locatie</h1>
+                    <p class="js-currentdata ">Dinsdag 17 November 14:16</p>
                 </div>
 
-                <div>
-                    <h3 class="js-icondescription">Cloudy</h3>
-                    <div class="js-icon">
+                <div class="c-item">
+                    <h3 class="js-icondescription c-icon-description">Cloudy</h3>
+                    <div class="js-icon c-icon">
                         <img src="/icons/01d.svg" alt="Wether icon">
                     </div>
 
                 </div>
-                <div>
-                    <h2 class="js-temperatuur">Temperatuur</h2>
+                <div class="c-item">
+                    <div>
+                        <h2 class="js-temperatuur c-item-feelslike">Temperatuur</h2>
+                    </div>
+                    <div>
+                        <h6 class="js-Min-Max-feelslike c-item-feelslike">--</h6>
+                    </div>
                 </div>
-                <div>
-                    <h6 class="js-Min-Max-feelslike">--</h6>
-                </div>
+
             </div>
-            <div class="grid-color grid_long">
-                <div class="c-unit">
-                    <h4>Humidity</h4>
-                    <p class="js-humidity">--</p>
-                </div>
-                <div class="c-unit-mid">
-                    <h4>Pressure</h4>
-                    <p class="js-pressure">--</p>
-                </div>
-                <div>
-                    <h4>Wind</h4>
-                    <p class="js-direction">--</p>
-                    <p class="js-Windspeed">--</p>
+
+
+            <div class="c-flex-item">
+                <div class="c-border">
+                    <div class="c-horizon">
+                        <div class="c-unit">
+                            <h4>Humidity</h4>
+                            <p class="js-humidity">--</p>
+                        </div>
+                        <div class="c-unit-mid">
+                            <h4>Pressure</h4>
+                            <p class="js-pressure">--</p>
+                        </div>
+                        <div>
+                            <h4>Wind</h4>
+                            <p class="js-direction">--</p>
+                            <p class="js-Windspeed">--</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -54,11 +64,14 @@
 
     <section class="o-row">
         <div class="o-container">
-            <h2>Toggle Switch</h2>
-            <label class="o-switch">
+            <div class="c-flex-item">
+                <h2>Toggle Switch</h2>
+                <label class="o-switch">
                 <input type="checkbox">
                 <div class="o-slider"></div>
             </label>
+            </div>
+
         </div>
     </section>
 
