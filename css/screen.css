@@ -116,13 +116,10 @@ h6 {
     font-weight: 300;
 }
 
-
-/* light */
-
 p {
     font-size: 14px;
-    line-height: 18px;
-    font-weight: 300;
+    line-height: 10px;
+    font-weight: 500;
 }
 
 ol,
@@ -429,8 +426,12 @@ a:focus {
     bottom: 0;
     border-radius: 15px;
     background-color: #ccc;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+}
+
+.o-slider:hover {
+    background-color: #8fb7f3;
 }
 
 .o-slider:before {
