@@ -493,11 +493,14 @@ img {
     line-height: 0px;
 }
 
-.c-horizon {
+.c-horizon-invertcolor {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     padding-top: 40px;
+    border-radius: 15px;
+    color: #5c69f2;
+    background-color: #c3e4fb;
 }
 
 
