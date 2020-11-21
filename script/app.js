@@ -53,7 +53,7 @@ const showData_celsius = data => {
     min = data.main.temp_min
     max = data.main.temp_max
     humidity = data.main.humidity
-    temperatuur = calc_temp(temp)
+    temperatuur = Math.round(calc_temp(temp) * 1) / 1
     feel_temp = calc_temp(feel)
     min_temp = calc_temp(min)
     max_temp = calc_temp(max)
@@ -68,7 +68,7 @@ const showData_farenheigt = data => {
     min = data.main.temp_min
     max = data.main.temp_max
     humidity = data.main.humidity
-    temperatuur = calc_farenheigt(temp)
+    temperatuur = Math.round(calc_farenheigt(temp) * 1) / 1
     feel_temp = calc_farenheigt(feel)
     min_temp = calc_farenheigt(min)
     max_temp = calc_farenheigt(max)
