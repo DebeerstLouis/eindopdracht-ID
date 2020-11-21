@@ -473,12 +473,12 @@ img {
 
 .c-flex-item {
     flex: 100%;
+    padding-top: 40px;
 }
 
 .c-item {
     flex-direction: column;
     justify-content: center;
-    padding-top: 40px;
 }
 
 .c-item-location {
@@ -487,9 +487,10 @@ img {
 
 .c-icon-description {
     line-height: 0px;
+    padding-top: 40px;
 }
 
-.c-item-feelslike {
+.c-item-temp {
     line-height: 0px;
 }
 
@@ -500,6 +501,7 @@ img {
     border-radius: 15px;
     color: #5c69f2;
     background-color: #c3e4fb;
+    height: 160px;
 }
 
 .c-items-box-left {

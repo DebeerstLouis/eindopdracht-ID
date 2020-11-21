@@ -102,7 +102,7 @@ const showData_location_icon = data => {
             document.querySelector('.js-icon').innerHTML = `<img src="${iconurl}" alt="Wether icon">`;
         }
         const d = new Date();
-        buddy = d.toUTCString()
+        buddy = d.toLocaleString()
         document.querySelector('.js-currentdata').innerText = `${buddy}`;
     }
     // --
