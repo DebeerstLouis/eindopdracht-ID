@@ -496,11 +496,18 @@ img {
 .c-horizon-invertcolor {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    padding-top: 40px;
+    justify-content: space-between;
     border-radius: 15px;
     color: #5c69f2;
     background-color: #c3e4fb;
+}
+
+.c-items-box-left {
+    padding-left: 100px;
+}
+
+.c-items-box-right {
+    padding-right: 100px;
 }
 
 
@@ -828,6 +835,18 @@ img {
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in mobile first design
 */
+
+@media only screen and (max-width: 580px) {
+    .c-horizon-invertcolor {
+        flex-direction: column;
+    }
+    .c-items-box-left {
+        padding-left: 0px;
+    }
+    .c-items-box-right {
+        padding-right: 0px;
+    }
+}
 
 
 /* Small devices (landscape phones, 576px and up)
