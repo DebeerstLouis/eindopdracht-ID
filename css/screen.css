@@ -7,7 +7,10 @@
 #Variables
 \*------------------------------------*/
 
-:root {}
+:root {
+    --main-collor-background: #3040f5;
+    --main-color-Text: #eaf3fb;
+}
 
 
 /* CSS variables here */
@@ -32,7 +35,7 @@ html {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #5c69f2;
+    background-color: #3040f5ee;
 }
 
 *,
@@ -74,8 +77,8 @@ Default markup for images to make them responsive
 */
 
 img {
-    max-width: 100%;
-    vertical-align: top;
+    width: 200px;
+    height: 100%;
 }
 
 
@@ -466,12 +469,6 @@ input:checked+.o-slider:before {
 #COMPONENTS
 \*------------------------------------*/
 
-img {
-    width: 200px;
-    height: 100%;
-    object-fit: contain;
-}
-
 .c-flex-item {
     flex: 100%;
     padding-top: 40px;
@@ -500,9 +497,8 @@ img {
     flex-direction: row;
     justify-content: space-between;
     border-radius: 15px;
-    color: #5c69f2;
+    color: #3040f5;
     background-color: #c3e4fb;
-    height: 160px;
 }
 
 .c-items-box-left {
