@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my Html page for eindopdracht">
     <title>eindopdracht</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
@@ -14,64 +15,61 @@
 <body>
     <section class="o-row">
         <div class="o-container">
-            <div class="c-flex-item o-layout--align-center">
-                <div class="c-item">
-                    <h1 class="js-locatie c-item-location">Locatie</h1>
+            <div class="c-align-item c-item-margin-ls">
+                <div class="">
+                    <h1 class="js-locatie">Locatie</h1>
+                </div>
+                <div class="">
                     <p class="js-currentdata ">Dinsdag 17 November 14:16</p>
-                </div>
-
-                <div class="c-item">
-                    <h3 class="js-icondescription c-icon-description">Cloudy</h3>
-                    <div class="js-icon c-icon">
-                        <img src="/icons/01d.svg" alt="Wether icon">
-                    </div>
-
-                </div>
-                <div class="c-item">
-                    <div>
-                        <h2 class="js-temperatuur c-item-temp">Temperatuur</h2>
-                    </div>
-                    <div>
-                        <h6 class="js-Min-Max-feelslike c-item-temp">--</h6>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="c-flex-item">
-                <div class="c-horizon-invertcolor">
-                    <div class="c-items-box-left">
-                        <h4>Humidity</h4>
-                        <p class="js-humidity">--</p>
-                    </div>
-                    <div class="c-items-box-middle">
-                        <h4>Pressure</h4>
-                        <p class="js-pressure">--</p>
-                    </div>
-                    <div class="c-items-box-right">
-                        <h4>Wind</h4>
-                        <p class="js-direction">--</p>
-                        <p class="js-Windspeed">--</p>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="o-row">
-        <div class="o-container">
-            <div class="c-flex-item">
-                <h4 class="js-switch">Toggle Switch</h4>
-                <label class="o-switch">
-                <input type="checkbox">
-                <div class="o-slider"></div>
-            </label>
+        <div class="o-container c-align-item ">
+            <h2 class="js-icondescription c-item-combine">Cloudy</h2>
+            <div class="js-icon">
+                <img src="/icons/01d.svg" alt="Wether icon">
+            </div>
+        </div>
+    </section>
+    <section class="o-row">
+        <div class="o-container c-align-item c-item-margin-lg">
+            <div>
+                <h3 class="js-temperatuur c-item-combine">Temperatuur</h3>
+            </div>
+            <div>
+                <h6 class="js-Min-Max-feelslike">--</h6>
+            </div>
+        </div>
+
+    </section>
+    <section class="">
+        <div class="o-container-grid-container">
+            <div class="c-grid-item">
+                <h4>Humidity</h4>
+                <p class="js-humidity">--</p>
+            </div>
+            <div class="c-grid-item">
+                <h4>Pressure</h4>
+                <p class="js-pressure">--</p>
+            </div>
+            <div class="c-grid-item">
+                <h4>Wind</h4>
+                <p class="js-direction">--</p>
+                <p class="js-Windspeed">--</p>
             </div>
 
         </div>
     </section>
-
-
+    <section class="o-row">
+        <div class="o-container">
+            <h4 class="js-switch">Toggle Switch</h4>
+            <label class="">
+                <input type="checkbox">
+            </label>
+        </div>
+    </section>
 </body>
 
 </html>

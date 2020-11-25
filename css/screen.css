@@ -1,5 +1,5 @@
 /*------------------------------------*\
-#FONTS
+  #FONTS
 \*------------------------------------*/
 
 
@@ -8,16 +8,32 @@
 \*------------------------------------*/
 
 :root {
-    --main-collor-background: #3040f5;
+    /* typography */
+    --global-font-size-xs: 75%;
+    /* 12px */
+    --global-font-size-s: 87.5%;
+    /* 14px */
+    --global-font-size-normal: 112.5%;
+    /* 18px */
+    --global-font-size-m: 150%;
+    /* 24px */
+    --global-font-size-l: 187.5%;
+    /* 30px */
+    --global-font-size-xl: 225%;
+    /* 36px */
+    --global-font-size-xxl: 262.5%;
+    /* 42px */
+    /* colors */
+    --main-collor-background: #5c69f2;
     --main-color-Text: #eaf3fb;
+    --main-inverted-backgroundcolor: #eaf3fb;
+    --main-inverted-textcolor: #5c69f2;
+    /* whitespace */
 }
 
 
-/* CSS variables here */
-
-
 /*------------------------------------*\
-#GENERIC
+  #GENERIC
 \*------------------------------------*/
 
 
@@ -28,14 +44,14 @@
 */
 
 html {
-    font-size: 24px;
-    line-height: 2;
-    font-family: "Mulish", sans-serif;
-    color: #eaf3fb;
+    font-size: var(--global-font-size-normal);
+    line-height: 20px;
+    font-family: "Mulish", arial, sans-serif;
+    color: var(--main-color-Text);
+    background-color: var(--main-collor-background);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #3040f5ee;
 }
 
 *,
@@ -46,11 +62,11 @@ html {
 
 
 /*
-* Remove text-shadow in selection highlight:
-* https://twitter.com/miketaylr/status/12228805301
-*
-* Customize the background color to match your design.
-*/
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
 
 ::-moz-selection {
     background: #8fb7f3;
@@ -66,19 +82,20 @@ html {
 
 
 /*------------------------------------*\
-#Elements
+  #Elements
 \*------------------------------------*/
 
 
 /*
-Elements: Images
----
-Default markup for images to make them responsive
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
 */
 
 img {
-    width: 200px;
-    height: 100%;
+    height: 120px;
+    max-width: 100%;
+    vertical-align: top;
 }
 
 
@@ -88,41 +105,52 @@ img {
     Default markup for typographic elements
 */
 
+h1,
+h2,
+h3 {
+    font-weight: 400;
+}
+
 h1 {
-    font-size: 42px;
+    font-size: var(--global-font-size-xl);
     line-height: 52px;
+    margin: 0 0 0;
     font-weight: 400;
 }
 
 h2 {
-    font-size: 42px;
-    line-height: 52px;
-    font-weight: 700;
+    font-size: var(--global-font-size-m);
+    line-height: 30px;
+    font-weight: 300;
+    margin: 0 0 24px;
 }
 
 h3 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 300;
+    font-size: var(--global-font-size-xl);
+    line-height: 53px;
+    font-weight: 600;
+    margin: 0 0 24px;
 }
 
 h4 {
-    font-size: 24px;
+    font-size: var(--global-font-size-m);
     line-height: 30px;
-    font-weight: 700;
+    font-weight: 500;
+    margin: 0 0 24px;
 }
 
 h5,
 h6 {
-    font-size: 18px;
+    font-size: var(--global-font-size-s);
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 400;
+    margin: 0 0 24px;
 }
 
 p {
-    font-size: 14px;
-    line-height: 10px;
-    font-weight: 500;
+    font-weight: 300;
+    font-size: var(--global-font-size-s);
+    margin: 0 0 0;
 }
 
 ol,
@@ -171,23 +199,23 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color: #8fb7f3;
     transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color: #8fb7f3;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color: #789acc;
 }
 
 
 /*------------------------------------*\
-#OBJECTS
+  #OBJECTS
 \*------------------------------------*/
 
 
@@ -199,20 +227,15 @@ a:focus {
 
 .o-row {
     position: relative;
-    padding: 0px 0px 12px;
+    padding: 24px 24px 0;
+    display: flex;
 }
 
 
 /* size modifiers */
 
 .o-row--lg {
-    padding-top: 48px;
-    padding-bottom: 24px;
-}
-
-.o-row--xl {
-    padding-top: 72px;
-    padding-bottom: 48px;
+    padding: 48px 24px 24px;
 }
 
 @media (min-width: 768px) {
@@ -220,12 +243,13 @@ a:focus {
         padding-left: 48px;
         padding-right: 48px;
     }
-}
-
-@media (min-width: 992px) {
-    .o-row--xl {
-        padding-top: 96px;
-        padding-bottom: 72px;
+    .o-row--md {
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+    .o-row--lg {
+        padding-top: 72px;
+        padding-bottom: 48px;
     }
 }
 
@@ -237,14 +261,25 @@ a:focus {
 */
 
 .o-container {
-    display: flex;
     margin-left: auto;
     margin-right: auto;
-    max-width: 35.41666667em;
-    /* 35.41666667 * 24px = 850 */
-    width: 100%;
-    flex-wrap: wrap;
-    text-align: center;
+    max-width: 55.5555556em;
+    /* 55.55555 * 18px = 1000px */
+}
+
+.o-container-grid-container {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    background-color: #c3e4fb;
+    color: #5c69f2;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 44.4444444em;
+    /* 44.4444444 18px = 800px */
+    height: 150px;
+    border-radius: 15px;
+    grid-column-gap: 40px;
 }
 
 
@@ -255,23 +290,24 @@ a:focus {
 */
 
 .o-section {
-    position: relative;
+    display: flow-root;
+    /* New solution! Fixes margin collapsing */
 }
 
 .o-section+.o-section {
-    padding-top: 24px;
+    margin-top: 24px;
 }
 
 @media (min-width: 768px) {
     .o-section--lg+.o-section--lg,
     .o-section--xl+.o-section--xl {
-        padding-top: 48px;
+        margin-top: 48px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .o-section--xl+.o-section--xl {
-        padding-top: 72px;
+        margin-top: 72px;
     }
 }
 
@@ -285,14 +321,12 @@ a:focus {
 */
 
 .o-layout {
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
     flex-wrap: wrap;
 }
 
 .o-layout__item {
-    width: 100%;
+    flex-basis: 100%;
 }
 
 
@@ -320,14 +354,6 @@ a:focus {
 
 .o-layout--gutter-lg>.o-layout__item {
     padding: 0 24px;
-}
-
-.o-layout--gutter-xl {
-    margin: 0 -48px;
-}
-
-.o-layout--gutter-xl>.o-layout__item {
-    padding: 0 48px;
 }
 
 
@@ -407,127 +433,47 @@ a:focus {
 }
 
 
-/* toggle switch */
-
-.o-switch {
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-}
-
-.o-switch input {
-    display: none;
-}
-
-.o-slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 15px;
-    background-color: #ccc;
-    -webkit-transition: 1.5s;
-    transition: 1.5s;
-}
-
-.o-slider:hover {
-    background-color: #8fb7f3;
-}
-
-.o-slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    border-radius: 15px;
-    background-color: white;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-}
-
-input:checked+.o-slider {
-    background-color: #2196f3;
-}
-
-input:focus+.o-slider {
-    box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked+.o-slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-
-/*------------------------------------*\
-#COMPONENTS
-\*------------------------------------*/
-
-.c-flex-item {
-    flex: 100%;
-    padding-top: 40px;
-}
-
-.c-item {
-    flex-direction: column;
-    justify-content: center;
-}
-
-.c-item-location {
-    line-height: 0px;
-}
-
-.c-icon-description {
-    line-height: 0px;
-    padding-top: 40px;
-}
-
-.c-item-temp {
-    line-height: 0px;
-}
-
-.c-horizon-invertcolor {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 15px;
-    color: #3040f5;
-    background-color: #c3e4fb;
-}
-
-.c-items-box-left {
-    padding-left: 100px;
-}
-
-.c-items-box-right {
-    padding-right: 100px;
-}
-
-
-/*------------------------------------*\
-#UTILITIES
-\*------------------------------------*/
-
-
 /*
-    Utilities: color
+    Objects: List
     ---
-    Utility classes to put specific colors onto elements
+    Small reusable object to remove default list styling from lists
 */
 
-.u-color-neutral-base {
-    color: Silver;
+.o-list {
+    list-style: none;
+    padding: 0;
 }
 
-.u-color-neutral-dark {
-    color: Black;
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+
+.c-align-item {
+    text-align: center;
 }
+
+.c-item-combine {
+    margin: 0 0 0px;
+}
+
+.c-grid-item {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.c-item-margin-lg {
+    margin-bottom: 50px;
+}
+
+.c-item-margin-ls {
+    margin-bottom: 20px;
+}
+
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
 
 
 /*
@@ -572,19 +518,23 @@ input:checked+.o-slider:before {
 */
 
 .u-max-width-xs {
-    max-width: 27em !important;
+    max-width: 18em !important;
 }
 
 .u-max-width-sm {
-    max-width: 39em !important;
+    max-width: 32em !important;
 }
 
 .u-max-width-md {
-    max-width: 50em !important;
+    max-width: 42em !important;
 }
 
 .u-max-width-lg {
-    max-width: 63.5em !important;
+    max-width: 60em !important;
+}
+
+.u-max-width-xl {
+    max-width: 70em !important;
 }
 
 .u-max-width-none {
@@ -593,232 +543,211 @@ input:checked+.o-slider:before {
 
 
 /*
-    Utilities: align
+    Utility: Flex
     ---
-    Utility classes align text or components
-*/
-
-.u-align-text-center {
-    text-align: center;
-}
-
-.u-align-center {
-    margin: 0 auto;
-}
-
-
-/*
-    Utilities: text
-    Utility classes to create smaller or bigger test
-*/
-
-.u-text-sm {
-    font-size: 14px;
-}
-
-
-/*
-    Utility: Widths
-    ---
-    Utility classes to put specific widths onto elements
+    Utility classes to put specific flex properties onto elements
     Will be mostly used on o-layout__item
 */
 
-.u-width-auto {
-    width: auto !important;
+.u-flex-basis-auto {
+    flex-basis: auto !important;
+}
+
+.u-flex-grow-1 {
+    flex-grow: 1 !important;
 }
 
 .u-1-of-2 {
-    width: 50% !important;
+    flex-basis: calc(100% / 2) !important;
 }
 
 .u-1-of-3 {
-    width: 33.3333333333% !important;
+    flex-basis: calc(100% / 3) !important;
 }
 
 .u-2-of-3 {
-    width: 66.6666666667% !important;
+    flex-basis: calc(100% / 3 * 2) !important;
 }
 
 .u-1-of-4 {
-    width: 25% !important;
+    flex-basis: calc(100% / 4) !important;
 }
 
 .u-3-of-4 {
-    width: 75% !important;
+    flex-basis: calc(100% / 4 * 3) !important;
 }
 
 .u-1-of-5 {
-    width: 20% !important;
+    flex-basis: calc(100% / 5) !important;
 }
 
 .u-2-of-5 {
-    width: 40% !important;
+    flex-basis: calc(100% / 5 * 2) !important;
 }
 
 .u-3-of-5 {
-    width: 60% !important;
+    flex-basis: calc(100% / 5 * 3) !important;
 }
 
 .u-4-of-5 {
-    width: 80% !important;
+    flex-basis: calc(100% / 5 * 4) !important;
 }
 
 .u-1-of-6 {
-    width: 16.6666666667% !important;
+    flex-basis: calc(100% / 6) !important;
 }
 
 .u-5-of-6 {
-    width: 83.3333333333% !important;
+    flex-basis: calc(100% / 6 * 5) !important;
 }
 
 @media (min-width: 576px) {
     .u-1-of-2-bp1 {
-        width: 50% !important;
+        flex-basis: calc(100% / 2) !important;
     }
     .u-1-of-3-bp1 {
-        width: 33.3333333333% !important;
+        flex-basis: calc(100% / 3) !important;
     }
     .u-2-of-3-bp1 {
-        width: 66.6666666667% !important;
+        flex-basis: calc(100% / 3 * 2) !important;
     }
     .u-1-of-4-bp1 {
-        width: 25% !important;
+        flex-basis: calc(100% / 4) !important;
     }
     .u-3-of-4-bp1 {
-        width: 75% !important;
+        flex-basis: calc(100% / 4 * 3) !important;
     }
     .u-1-of-5-bp1 {
-        width: 20% !important;
+        flex-basis: calc(100% / 5) !important;
     }
     .u-2-of-5-bp1 {
-        width: 40% !important;
+        flex-basis: calc(100% / 5 * 2) !important;
     }
     .u-3-of-5-bp1 {
-        width: 60% !important;
+        flex-basis: calc(100% / 5 * 3) !important;
     }
     .u-4-of-5-bp1 {
-        width: 80% !important;
+        flex-basis: calc(100% / 5 * 4) !important;
     }
     .u-1-of-6-bp1 {
-        width: 16.6666666667% !important;
+        flex-basis: calc(100% / 6) !important;
     }
     .u-5-of-6-bp1 {
-        width: 83.3333333333% !important;
+        flex-basis: calc(100% / 6 * 5) !important;
     }
 }
 
 @media (min-width: 768px) {
     .u-1-of-2-bp2 {
-        width: 50% !important;
+        flex-basis: calc(100% / 2) !important;
     }
     .u-1-of-3-bp2 {
-        width: 33.3333333333% !important;
+        flex-basis: calc(100% / 3) !important;
     }
     .u-2-of-3-bp2 {
-        width: 66.6666666667% !important;
+        flex-basis: calc(100% / 3 * 2) !important;
     }
     .u-1-of-4-bp2 {
-        width: 25% !important;
+        flex-basis: calc(100% / 4) !important;
     }
     .u-3-of-4-bp2 {
-        width: 75% !important;
+        flex-basis: calc(100% / 4 * 3) !important;
     }
     .u-1-of-5-bp2 {
-        width: 20% !important;
+        flex-basis: calc(100% / 5) !important;
     }
     .u-2-of-5-bp2 {
-        width: 40% !important;
+        flex-basis: calc(100% / 5 * 2) !important;
     }
     .u-3-of-5-bp2 {
-        width: 60% !important;
+        flex-basis: calc(100% / 5 * 3) !important;
     }
     .u-4-of-5-bp2 {
-        width: 80% !important;
+        flex-basis: calc(100% / 5 * 4) !important;
     }
     .u-1-of-6-bp2 {
-        width: 16.6666666667% !important;
+        flex-basis: calc(100% / 6) !important;
     }
     .u-5-of-6-bp2 {
-        width: 83.3333333333% !important;
+        flex-basis: calc(100% / 6 * 5) !important;
     }
 }
 
 @media (min-width: 992px) {
     .u-1-of-2-bp3 {
-        width: 50% !important;
+        flex-basis: calc(100% / 2) !important;
     }
     .u-1-of-3-bp3 {
-        width: 33.3333333333% !important;
+        flex-basis: calc(100% / 3) !important;
     }
     .u-2-of-3-bp3 {
-        width: 66.6666666667% !important;
+        flex-basis: calc(100% / 3 * 2) !important;
     }
     .u-1-of-4-bp3 {
-        width: 25% !important;
+        flex-basis: calc(100% / 4) !important;
     }
     .u-3-of-4-bp3 {
-        width: 75% !important;
+        flex-basis: calc(100% / 4 * 3) !important;
     }
     .u-1-of-5-bp3 {
-        width: 20% !important;
+        flex-basis: calc(100% / 5) !important;
     }
     .u-2-of-5-bp3 {
-        width: 40% !important;
+        flex-basis: calc(100% / 5 * 2) !important;
     }
     .u-3-of-5-bp3 {
-        width: 60% !important;
+        flex-basis: calc(100% / 5 * 3) !important;
     }
     .u-4-of-5-bp3 {
-        width: 80% !important;
+        flex-basis: calc(100% / 5 * 4) !important;
     }
     .u-1-of-6-bp3 {
-        width: 16.6666666667% !important;
+        flex-basis: calc(100% / 6) !important;
     }
     .u-5-of-6-bp3 {
-        width: 83.3333333333% !important;
+        flex-basis: calc(100% / 6 * 5) !important;
     }
 }
 
 @media (min-width: 1200px) {
     .u-1-of-2-bp4 {
-        width: 50% !important;
+        flex-basis: calc(100% / 2) !important;
     }
     .u-1-of-3-bp4 {
-        width: 33.3333333333% !important;
+        flex-basis: calc(100% / 3) !important;
     }
     .u-2-of-3-bp4 {
-        width: 66.6666666667% !important;
+        flex-basis: calc(100% / 3 * 2) !important;
     }
     .u-1-of-4-bp4 {
-        width: 25% !important;
+        flex-basis: calc(100% / 4) !important;
     }
     .u-3-of-4-bp4 {
-        width: 75% !important;
+        flex-basis: calc(100% / 4 * 3) !important;
     }
     .u-1-of-5-bp4 {
-        width: 20% !important;
+        flex-basis: calc(100% / 5) !important;
     }
     .u-2-of-5-bp4 {
-        width: 40% !important;
+        flex-basis: calc(100% / 5 * 2) !important;
     }
     .u-3-of-5-bp4 {
-        width: 60% !important;
+        flex-basis: calc(100% / 5 * 3) !important;
     }
     .u-4-of-5-bp4 {
-        width: 80% !important;
+        flex-basis: calc(100% / 5 * 4) !important;
     }
     .u-1-of-6-bp4 {
-        width: 16.6666666667% !important;
+        flex-basis: calc(100% / 6) !important;
     }
     .u-5-of-6-bp4 {
-        width: 83.3333333333% !important;
+        flex-basis: calc(100% / 6 * 5) !important;
     }
 }
 
 
 /*------------------------------------*\
-#MEDIA
+  #MEDIA
 \*------------------------------------*/
 
 
@@ -832,20 +761,8 @@ input:checked+.o-slider:before {
 
 
 /* Extra small devices (portrait phones, less than 576px)
-No media query since this is the default in mobile first design
+   No media query since this is the default in mobile first design
 */
-
-@media only screen and (max-width: 580px) {
-    .c-horizon-invertcolor {
-        flex-direction: column;
-    }
-    .c-items-box-left {
-        padding-left: 0px;
-    }
-    .c-items-box-right {
-        padding-right: 0px;
-    }
-}
 
 
 /* Small devices (landscape phones, 576px and up)
@@ -882,7 +799,7 @@ No media query since this is the default in mobile first design
         background: transparent !important;
         color: #000 !important;
         /* Black prints faster:
-        http://www.sanbeiji.com/archives/953 */
+                                   http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -897,9 +814,9 @@ No media query since this is the default in mobile first design
         content: " (" attr(title) ")";
     }
     /*
-    * Don't show links that are fragment identifiers,
-    * or use the `javascript:` pseudo protocol
-    */
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
     a[href^="#"]:after,
     a[href^="javascript:"]:after {
         content: "";
@@ -913,9 +830,9 @@ No media query since this is the default in mobile first design
         page-break-inside: avoid;
     }
     /*
-    * Printing Tables:
-    * http://css-discuss.incutio.com/wiki/Printing_Tables
-    */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
     thead {
         display: table-header-group;
     }
@@ -934,6 +851,3 @@ No media query since this is the default in mobile first design
         page-break-after: avoid;
     }
 }
-
-
-/* aanpassen zodat het in het document komt met de juiste benaming van school */
