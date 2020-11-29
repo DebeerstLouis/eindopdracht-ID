@@ -263,7 +263,7 @@ a:focus {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 55.5555556em;
+    max-width: 44.4444444em;
     /* 55.55555 * 18px = 1000px */
 }
 
@@ -554,6 +554,16 @@ a:focus {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
+}
+
+.c-item-margin {
+    margin-right: 20px;
+    margin-top: 60px;
+    font-size: var(--global-font-size-normal);
+}
+
+.c-item-margin-switch {
+    margin-top: 60px;
 }
 
 
