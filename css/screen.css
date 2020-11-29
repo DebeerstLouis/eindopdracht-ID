@@ -577,13 +577,13 @@ a:focus {
 .c-item-margin {
     margin-right: var(--whitespace-m);
     margin-top: var(--whitespace-extrabig);
-    margin-bottom: var(--whitespace-xs);
+    margin-bottom: var(--whitespace-s);
     font-size: var(--global-font-size-normal);
 }
 
 .c-item-margin-switch {
     margin-top: var(--whitespace-extrabig);
-    margin-bottom: var(--whitespace-xs);
+    margin-bottom: var(--whitespace-s);
 }
 
 
