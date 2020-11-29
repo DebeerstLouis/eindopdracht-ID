@@ -32,7 +32,21 @@
     --main-color-toggle-checked: #2196f3;
     --main-color-toggle-notchecked: #fff;
     --main-color-toggle-dot: #ccc;
-    /* whitespace */
+    /* whitespace/pixels */
+    /* 18px = 1rem */
+    --one-pixel: calc(1rem / 18);
+    --whitespace-xxs: calc(var(--one-pixel) * 5);
+    --whitespace-xs: calc(var(--one-pixel) * 10);
+    --whitespace-s: calc(var(--one-pixel) * 15);
+    --whitespace-m: calc(var(--one-pixel) * 20);
+    --whitespace-normal: calc(var(--one-pixel) * 25);
+    --whitespace-l: calc(var(--one-pixel) * 30);
+    --whitespace-xl: calc(var(--one-pixel) * 35);
+    --whitespace-xxl: calc(var(--one-pixel) * 40);
+    --whitespace-xxxl: calc(var(--one-pixel) * 45);
+    --whitespace-big: calc(var(--one-pixel) * 50);
+    --whitespace-extrabig: calc(var(--one-pixel) * 55);
+    --whitespace-extreem: calc(var(--one-pixel) * 60);
 }
 
 
@@ -49,7 +63,7 @@
 
 html {
     font-size: var(--global-font-size-normal);
-    line-height: 20px;
+    line-height: var(--whitespace-m);
     font-family: "Mulish", arial, sans-serif;
     color: var(--main-color-Text);
     background-color: var(--main-collor-background);
@@ -117,38 +131,38 @@ h3 {
 
 h1 {
     font-size: var(--global-font-size-xl);
-    line-height: 52px;
+    line-height: var(--whitespace-big);
     margin: 0 0 0;
     font-weight: 400;
 }
 
 h2 {
     font-size: var(--global-font-size-l);
-    line-height: 30px;
+    line-height: var(--whitespace-l);
     font-weight: 400;
-    margin: 0 0 24px;
+    margin: 0 0 var(--whitespace-normal);
 }
 
 h3 {
     font-size: var(--global-font-size-xl);
-    line-height: 53px;
+    line-height: var(--whitespace-big);
     font-weight: 600;
-    margin: 0 0 24px;
+    margin: 0 0 var(--whitespace-normal);
 }
 
 h4 {
     font-size: var(--global-font-size-m);
-    line-height: 30px;
+    line-height: var(--whitespace-l);
     font-weight: 500;
-    margin: 0 0 24px;
+    margin: 0 0 var(--whitespace-normal);
 }
 
 h5,
 h6 {
     font-size: var(--global-font-size-s);
-    line-height: 24px;
+    line-height: var(--whitespace-normal);
     font-weight: 400;
-    margin: 0 0 24px;
+    margin: 0 0 var(--whitespace-normal);
 }
 
 p {
@@ -163,12 +177,12 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+    margin: 0 0 var(--whitespace-normal);
 }
 
 ul,
 ol {
-    padding-left: 24px;
+    padding-left: var(--whitespace-normal);
 }
 
 li ul,
@@ -178,9 +192,9 @@ li ol {
 
 blockquote {
     font-style: normal;
-    font-size: 23px;
-    line-height: 32px;
-    margin: 0 0 24px;
+    font-size: var(--global-font-size-m);
+    line-height: var(--whitespace-l);
+    margin: 0 0 var(--whitespace-normal);
 }
 
 blockquote * {
@@ -190,16 +204,16 @@ blockquote * {
 
 figcaption {
     font-weight: 400;
-    font-size: 12px;
-    line-height: 16px;
-    margin-top: 8px;
+    font-size: var(--global-font-size-xs);
+    line-height: var(--whitespace-s);
+    margin-top: var(--whitespace-xs);
 }
 
 hr {
     border: 0;
     height: 1px;
     background: var(--main-color-selected);
-    margin: 0 0 24px;
+    margin: 0 0 var(--whitespace-normal);
 }
 
 a {
@@ -231,7 +245,7 @@ a:focus {
 
 .o-row {
     position: relative;
-    padding: 24px 24px 0;
+    padding: var(--whitespace-normal) var(--whitespace-normal) 0;
     display: flex;
 }
 
@@ -239,7 +253,7 @@ a:focus {
 /* size modifiers */
 
 .o-row--lg {
-    padding: 48px 24px 24px;
+    padding: var(--whitespace-xxxl) var(--whitespace-normal) var(--whitespace-normal);
 }
 
 @media (min-width: 768px) {
@@ -286,17 +300,17 @@ a:focus {
     margin-right: auto;
     max-width: 44.4444444em;
     /* 44.4444444 18px = 800px */
-    height: 150px;
-    border-radius: 15px;
-    grid-column-gap: 40px;
+    height: 8.333333333rem;
+    border-radius: var(--whitespace-s);
+    grid-column-gap: var(--whitespace-xxl);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 28em) {
     .o-container-grid-container {
         display: block;
         height: auto;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: var(--whitespace-xxs);
+        padding-bottom: var(--whitespace-xxs);
     }
 }
 
@@ -313,19 +327,19 @@ a:focus {
 }
 
 .o-section+.o-section {
-    margin-top: 24px;
+    margin-top: var(--whitespace-normal);
 }
 
 @media (min-width: 768px) {
     .o-section--lg+.o-section--lg,
     .o-section--xl+.o-section--xl {
-        margin-top: 48px;
+        margin-top: var(--whitespace-big);
     }
 }
 
 @media (min-width: 1200px) {
     .o-section--xl+.o-section--xl {
-        margin-top: 72px;
+        margin-top: var(--whitespace-extreem);
     }
 }
 
@@ -477,17 +491,17 @@ a:focus {
 
 .c-grid-item {
     text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    margin-top: var(--whitespace-s);
+    margin-bottom: var(--whitespace-xs);
 }
 
 .c-item-margin-lg {
-    margin-bottom: 50px;
+    margin-bottom: var(--whitespace-big);
 }
 
 .c-item-margin-ls {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: var(--whitespace-m);
+    margin-top: var(--whitespace-m);
 }
 
 
@@ -497,9 +511,9 @@ a:focus {
 
 .c-icon {
     fill: var(--main-color-Text);
-    margin-right: 5px;
-    width: 30px;
-    height: 30px;
+    margin-right: var(--whitespace-xxs);
+    width: var(--whitespace-l);
+    height: var(--whitespace-l);
 }
 
 
@@ -510,8 +524,8 @@ a:focus {
 .c-switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: var(--whitespace-extreem);
+    height: var(--whitespace-xl);
 }
 
 .c-switch-slider {
@@ -536,10 +550,10 @@ a:focus {
 .c-switch-slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: var(--whitespace-normal);
+    width: var(--whitespace-normal);
+    left: var(--whitespace-xxs);
+    bottom: var(--whitespace-xxs);
     background-color: var(--main-color-toggle-notchecked);
     -webkit-transition: 0.4s;
     transition: 0.4s;
@@ -561,15 +575,15 @@ a:focus {
 }
 
 .c-item-margin {
-    margin-right: 20px;
-    margin-top: 60px;
-    margin-bottom: 10px;
+    margin-right: var(--whitespace-m);
+    margin-top: var(--whitespace-extrabig);
+    margin-bottom: var(--whitespace-xs);
     font-size: var(--global-font-size-normal);
 }
 
 .c-item-margin-switch {
-    margin-top: 60px;
-    margin-bottom: 10px;
+    margin-top: var(--whitespace-extrabig);
+    margin-bottom: var(--whitespace-xs);
 }
 
 
