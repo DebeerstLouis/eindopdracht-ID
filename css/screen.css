@@ -26,8 +26,9 @@
     /* colors */
     --main-collor-background: #5c69f2;
     --main-color-Text: #eaf3fb;
-    --main-inverted-backgroundcolor: #eaf3fb;
-    --main-inverted-textcolor: #5c69f2;
+    --main-color-selected: #8fb7f3;
+    --main-color-focus: #789acc;
+    --main-color-white: #fff;
     --main-color-toggle-checked: #2196f3;
     --main-color-toggle-notchecked: #fff;
     --main-color-toggle-dot: #ccc;
@@ -72,14 +73,14 @@ html {
  */
 
 ::-moz-selection {
-    background: #8fb7f3;
-    color: white;
+    background: var(--main-color-selected);
+    color: var(--main-color-white);
     text-shadow: none;
 }
 
 ::selection {
-    background: #8fb7f3;
-    color: white;
+    background: var(--main-color-selected);
+    color: var(--main-color-white);
     text-shadow: none;
 }
 
@@ -197,23 +198,23 @@ figcaption {
 hr {
     border: 0;
     height: 1px;
-    background: LightGrey;
+    background: var(--main-color-selected);
     margin: 0 0 24px;
 }
 
 a {
-    color: #8fb7f3;
+    color: var(--main-color-selected);
     transition: all 0.1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: #8fb7f3;
+    color: var(--main-color-selected);
 }
 
 a:hover,
 a:focus {
-    color: #789acc;
+    color: var(--main-color-focus);
 }
 
 
