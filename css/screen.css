@@ -28,6 +28,9 @@
     --main-color-Text: #eaf3fb;
     --main-inverted-backgroundcolor: #eaf3fb;
     --main-inverted-textcolor: #5c69f2;
+    --main-color-toggle-checked: #2196f3;
+    --main-color-toggle-notchecked: #fff;
+    --main-color-toggle-dot: #ccc;
     /* whitespace */
 }
 
@@ -276,8 +279,8 @@ a:focus {
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: auto auto auto;
-    background-color: #c3e4fb;
-    color: #5c69f2;
+    background-color: var(--main-color-Text);
+    color: var(--main-collor-background);
     margin-left: auto;
     margin-right: auto;
     max-width: 44.4444444em;
@@ -517,7 +520,7 @@ a:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--main-color-toggle-dot);
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 34px;
@@ -536,18 +539,18 @@ a:focus {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: var(--main-color-toggle-notchecked);
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
 }
 
 .c-switch-input:checked+.c-switch-slider {
-    background-color: #2196f3;
+    background-color: var(--main-color-toggle-checked);
 }
 
 .c-switch-input:focus+.c-switch-slider {
-    box-shadow: 0 0 1px #2196f3;
+    box-shadow: 0 0 1px var(--main-color-toggle-checked);
 }
 
 .c-switch-input:checked+.c-switch-slider:before {
