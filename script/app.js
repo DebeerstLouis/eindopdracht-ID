@@ -112,7 +112,7 @@ const showData_location_icon = data => {
 const getAPI = async(position) => {
     lat = position.coords.latitude
     lon = position.coords.longitude
-    const data = await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=4dc82a8db4261d0aaa945c76431fda04`)
+    const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&APPID=4dc82a8db4261d0aaa945c76431fda04`)
         .then((r) => r.json())
         .catch((err) => console.error('Error: ', err))
     showData_Wind_and_pressure(data);
