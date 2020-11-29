@@ -99,7 +99,7 @@ const showData_location_icon = data => {
             Weather = data.weather[i]
             document.querySelector('.js-icondescription').innerText = `${Weather.main}`;
             Icon_name = Weather.icon;
-            iconurl = `/icons/${Icon_name}.svg`
+            iconurl = `icons/${Icon_name}.svg`
 
             document.querySelector('.js-icon').innerHTML = `<img src="${iconurl}" alt="Wether icon">`;
         }
