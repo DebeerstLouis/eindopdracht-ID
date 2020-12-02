@@ -305,7 +305,7 @@ a:focus {
     grid-column-gap: var(--whitespace-xxl);
 }
 
-@media (max-width: 28em) {
+@media (max-width: 30em) {
     .o-container-grid-container {
         display: block;
         height: auto;
@@ -575,6 +575,7 @@ a:focus {
 }
 
 .c-item-margin {
+    margin-left: var(--whitespace-s);
     margin-right: var(--whitespace-m);
     margin-top: var(--whitespace-extrabig);
     margin-bottom: var(--whitespace-m);
