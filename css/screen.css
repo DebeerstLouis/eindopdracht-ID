@@ -587,6 +587,16 @@ a:focus {
     margin-bottom: var(--whitespace-m);
 }
 
+.vieuw-zoom {
+    transform: scale(1.2);
+    transition: 0.4s ease-in;
+}
+
+.vieuw-zoom-out {
+    transform: initial;
+    transition: 0.3s ease-out;
+}
+
 
 /*------------------------------------*\
   #UTILITIES

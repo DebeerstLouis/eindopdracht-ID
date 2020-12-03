@@ -77,6 +77,7 @@ const showData_farenheigt = data => {
     document.querySelector('.js-Min-Max-feelslike').innerText = `Max ${max_temp}°  Min ${min_temp}°  Feels like ${feel_temp}°`;
     document.querySelector('.js-humidity').innerText = `${humidity}%`;
 
+
 }
 const showData_Wind_and_pressure = data => {
     console.log(data)
@@ -121,15 +122,36 @@ const getAPI = async(position) => {
     // controleren op de toggle switch voor celsius naar fahrenheit
     var checkbox = document.querySelector('input[type="checkbox"]');
     checkbox.addEventListener('change', function() {
+
         if (checkbox.checked) {
             showData_farenheigt(data)
                 // console.log('Checked');
+
+            showZoom();
+
+
         } else {
             showData_celsius(data);
             // console.log('Not checked');
+            showZoom();
+
         };
     });
 };
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function showZoom() {
+    TextTemp.classList.add('vieuw-zoom');
+    sleep(1000).then(() => {
+        TextTemp.classList.add('vieuw-zoom-out');
+        sleep(1000).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
+    });
+    // sleep(2000).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
+
+}
 
 function getLocation() {
     if (navigator.geolocation) {
@@ -145,6 +167,7 @@ function getLocation() {
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script ingeladen');
+    TextTemp = document.querySelector('.js-zoom-element')
     getLocation();
     // getAPI(50.8868222, 3.4323622)
 })
