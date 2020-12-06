@@ -109,7 +109,8 @@ const showData_location_icon = data => {
         document.querySelector('.js-currentdata').innerText = `${buddy}`;
     }
     // --
-    // --data ophalen ++ controleren op toggle switch ++ huidige locatie opvragen--
+
+// --data ophalen ++ controleren op toggle switch ++ huidige locatie opvragen--
 const getAPI = async(position) => {
     lat = position.coords.latitude
     lon = position.coords.longitude
@@ -166,7 +167,7 @@ function getLocation() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Script ingeladen');
+    console.log('Script ingeladen!');
     TextTemp = document.querySelector('.js-zoom-element')
     getLocation();
     // getAPI(50.8868222, 3.4323622)
