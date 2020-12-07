@@ -45,7 +45,8 @@ var calc_wind = function(deg) {
         }
     }
     // --
-    // --Data dat wordt getoont--
+
+// --Data dat wordt getoont--
 const showData_celsius = data => {
     //console.log(data)
     temp = data.main.temp;
