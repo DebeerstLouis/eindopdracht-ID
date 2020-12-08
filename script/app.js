@@ -147,9 +147,9 @@ function sleep(ms) {
 
 function showZoom() {
     TextTemp.classList.add('vieuw-zoom');
-    sleep(900).then(() => {
+    sleep(500).then(() => {
         TextTemp.classList.add('vieuw-zoom-out');
-        sleep(700).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
+        sleep(600).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
     });
     // sleep(2000).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
 
