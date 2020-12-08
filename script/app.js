@@ -95,7 +95,7 @@ const showData_Wind_and_pressure = data => {
     windspeed_convert = windspeed * 3.6
     result = Math.round(windspeed_convert * 100) / 100
         //console.log(windspeed_convert)
-    document.querySelector('.js-Windspeed').innerText = `${result} KM/u`;
+    document.querySelector('.js-Windspeed').innerText = `${result} Km/u`;
     document.querySelector('.js-direction').innerText = `${windname}`;
     document.querySelector('.js-pressure').innerText = `${pressure} pha`
 }
