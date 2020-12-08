@@ -177,32 +177,6 @@ li ol {
     margin-bottom: 0;
 }
 
-blockquote {
-    font-style: normal;
-    font-size: var(--global-font-size-m);
-    line-height: var(--whitespace-l);
-    margin: 0 0 var(--whitespace-normal);
-}
-
-blockquote * {
-    font-size: inherit;
-    line-height: inherit;
-}
-
-figcaption {
-    font-weight: 400;
-    font-size: var(--global-font-size-xs);
-    line-height: var(--whitespace-s);
-    margin-top: var(--whitespace-xs);
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: var(--main-color-selected);
-    margin: 0 0 var(--whitespace-normal);
-}
-
 a {
     color: var(--main-color-selected);
     transition: all 0.1s ease-in-out;
