@@ -170,8 +170,6 @@ function getLocation() {
 // --
 
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script ingeladen!');
     TextTemp = document.querySelector('.js-zoom-element')
