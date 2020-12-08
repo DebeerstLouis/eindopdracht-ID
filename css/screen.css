@@ -143,7 +143,6 @@ h2 {
     margin: 0 0 var(--whitespace-normal);
 }
 
-h3,
 h4 {
     font-size: var(--global-font-size-m);
     line-height: var(--whitespace-l);
