@@ -594,7 +594,7 @@ a:focus {
 
 .vieuw-zoom-out {
     transform: initial;
-    transition: 0.3s ease-out;
+    transition: 0.4s ease-out;
 }
 
 
