@@ -101,7 +101,6 @@ const showData_Wind_and_pressure = data => {
 }
 const showData_location_icon = data => {
     Locatie = data.name;
-    //description = data.weather
     document.querySelector('.js-locatie').innerText = `${Locatie}`;
     for (var i in data.weather) {
         Weather = data.weather[i]
@@ -111,6 +110,7 @@ const showData_location_icon = data => {
 
         document.querySelector('.js-icon').innerHTML = `<img src="${iconurl}" alt="Wether icon">`;
     }
+    // current date opvragen
     const d = new Date();
     buddy = d.toLocaleString()
     document.querySelector('.js-currentdata').innerText = `${buddy}`;
@@ -149,17 +149,15 @@ const getAPI = async(position) => {
 };
 
 
-
+// als er getoggolt wordt.
 function showZoom() {
     TextTemp.classList.add('vieuw-zoom');
     sleep(500).then(() => {
         TextTemp.classList.add('vieuw-zoom-out');
         sleep(600).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
     });
-    // sleep(2000).then(() => { TextTemp.classList.remove('vieuw-zoom', 'vieuw-zoom-out'); });
-
 }
-
+// Locatie opvragen!!
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(getAPI);
@@ -169,10 +167,9 @@ function getLocation() {
 }
 // --
 
-
+// DOMComtentLoaded uitvoeren!!
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Script ingeladen!');
+    console.log('Script ingeladen!!!');
     TextTemp = document.querySelector('.js-zoom-element')
     getLocation();
-    // getAPI(50.8868222, 3.4323622)
 })
