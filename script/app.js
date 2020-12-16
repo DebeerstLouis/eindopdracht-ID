@@ -44,13 +44,12 @@ var calc_wind = function(deg) {
         return "N";
     }
 }
-
-// --
 // hulpfunctie voor sleep
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 // --
+
 
 // --Data dat wordt getoont--
 const showData_celsius = data => {
@@ -166,7 +165,6 @@ function getLocation() {
     }
 }
 // --
-
 
 
 
